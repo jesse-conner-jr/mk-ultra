@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<div><p>
+<h1>HTML Forms</h1>
+<p>Form elements Collection</p>
+
+</p></div>
+<!--
+var x = document.getElementById("myForm").elements.length; "lengtn returns the number of elements" 
+syntax: formobjece.element
+Property: length
+Methods: 
+[index] Returns the element in <form> with the specified index (starts at 0).
+item(index) 	Returns the element in <form> with the specified index (starts at 0).
+namedItem(id) 	Returns the element in <form> with the specified id.
+
+DOM Version: 	
+Core Level 2 Document Object
+Return Value: 	
+An HTMLFormsControlCollection Object, representing all elements in a <form> element. The elements in the collection are sorted as they appear in the source code
+[index]
+Example
+Get the value of the first element (index 0) in a form:
+var x = document.getElementById("myForm").elements[0].value; 
+item(index)
+Get the value of the first element (index 0) in a form:
+var x = document.getElementById("myForm").elements.item(0).value
+namedItem(id)
+
+Get the value of the element with name="fname" in a form:
+var x = document.getElementById("myForm").elements.namedItem("fname").value; 
+
+Loop through all elements in a form and output the value of each element:
+var x = document.getElementById("myForm");
+var txt = "";
+var i;
+for (i = 0; i < x.length; i++) {
+  txt = txt + x.elements[i].value + "<br>";
+}
+document.getElementById("demo").innerHTML = txt; 
+
+-->
+
+<!---->
+
+<h1 id="demo"></h1><br>
+<p id="heyGo"></p><br>
+
+
+
+<form id="dataform">
+
+First Name:<br>
+
+<input type="text" id="firstname" value=""><br>
+<input type="button" id="btn" onClick="Pass3()" value="Ok">	
+
+</form>
+
+<Script>
+var x="";
+
+function Pass3()
+ {
+   
+   document.dataform.firstname.value=x;
+   document.getElementById("btn").value=x;
+   }
+ }
+
+
+
+</script>
+
+</body>
+</html>
